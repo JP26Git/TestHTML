@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Performance Appraisals 2026 - Asthasit Boonmesap</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@600;700&family=Inter:wght@400;500;600&family=Noto+Sans+Thai:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+/* VOICE: calm engineering report, read like a project line list
+   IDEA: a piping line list — every project is a numbered line with a status tag
+   PICTURE: the line-list board in the first screen, clickable to each section
+   COLOUR and TYPE: deep green field, lime-white, coral for on-hold; Inter Tight / Inter / Noto Sans Thai / Noto Sans SC
+   LAYOUT: green header with board, sticky language bar, single calm reading column */
+:root{color-scheme:light dark;
+--bg:light-dark(#ffffff,#0d1714);--ink:light-dark(#14201c,#e7efe9);--mute:light-dark(#5b6b65,#9db0a8);
+--line:light-dark(#dfe7e3,#24342e);--soft:light-dark(#f3f7f4,#14221d);
+--g:#00463c;--g2:light-dark(#00463c,#7fd3b8);--lime:#e6f5c8;--coral:#ff6f59;--codebg:light-dark(#eef6e2,#1b2b20)}
+:root[data-theme=light]{color-scheme:light}:root[data-theme=dark]{color-scheme:dark}
+*{box-sizing:border-box;min-width:0}
+html{scroll-padding-top:150px;scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.75 Inter,"Noto Sans Thai","Noto Sans SC",system-ui,sans-serif;overflow-x:clip}
+:lang(th) body,body.th{font-family:"Noto Sans Thai",Inter,system-ui,sans-serif;line-height:1.85}
+body.zh{font-family:Inter,"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;line-height:1.85}
+h1,h2,h3{font-family:"Inter Tight","Noto Sans Thai","Noto Sans SC",sans-serif;text-wrap:balance;margin:0}
+.bar{position:sticky;top:0;z-index:5;background:var(--g);color:#fff;border-bottom:1px solid #0b5a4d}
+.bar .in{max-width:1240px;margin:auto;display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center;padding:10px max(5vw,16px)}
+.brand{font:700 16px/1.2 "Inter Tight",sans-serif;margin-right:auto;color:var(--lime)}
+.seg{display:flex;background:#00352d;border-radius:999px;padding:3px}
+.seg button{all:unset;cursor:pointer;min-height:38px;min-width:64px;padding:0 14px;border-radius:999px;text-align:center;font:600 15px/38px Inter,"Noto Sans Thai","Noto Sans SC",sans-serif;color:#cfe6dc}
+.seg button[aria-pressed=true]{background:var(--lime);color:var(--g)}
+.seg button:focus-visible,.tog:focus-within,.card:focus-visible{outline:3px solid var(--coral);outline-offset:2px}
+.tog{display:flex;align-items:center;gap:8px;font-size:14px;color:#cfe6dc;min-height:44px;cursor:pointer}
+.tog input{width:18px;height:18px;accent-color:var(--lime)}
+.tog[hidden]{display:none}
+header.band{background:var(--g);color:#fff;padding:clamp(28px,5vw,64px) max(5vw,16px) clamp(32px,5vw,56px)}
+header .in{max-width:1240px;margin:auto}
+header h1{font-size:clamp(32px,5vw,50px);line-height:1.08;max-width:22ch}
+header .lead{color:#cfe6dc;max-width:62ch;margin:14px 0 28px;font-size:17px}
+.board{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,260px),1fr));gap:10px}
+.card{display:grid;grid-template-columns:44px minmax(0,1fr);gap:4px 12px;align-items:start;padding:14px 16px;border-radius:12px;background:#0a5649;color:#fff;text-decoration:none;border:1px solid #13685a;transition:background .2s}
+.card:hover{background:#0e6555}
+.card .no{grid-row:span 2;font:700 22px/1 "Inter Tight",sans-serif;color:var(--lime);padding-top:4px}
+.card .t{font-weight:600;font-size:15.5px;line-height:1.4}
+.chip{justify-self:start;font-size:13px;line-height:1;padding:5px 9px;border-radius:999px;font-weight:600;white-space:nowrap}
+.s-done{background:var(--lime);color:var(--g)}
+.s-prog{background:transparent;color:var(--lime);box-shadow:inset 0 0 0 1.5px var(--lime)}
+.s-hold{background:var(--coral);color:#2a0c06}
+.s-plan{background:#cfe6dc22;color:#e9f4ef;box-shadow:inset 0 0 0 1.5px #cfe6dc66}
+main{max-width:800px;margin:auto;padding:clamp(24px,4vw,56px) max(5vw,16px) 80px}
+section{padding:36px 0 30px;border-bottom:1px solid var(--line)}
+section:last-of-type{border-bottom:0}
+.sh{display:flex;gap:16px;align-items:flex-start;margin-bottom:14px}
+.sn{flex:none;width:52px;height:52px;border-radius:50%;background:var(--g);color:var(--lime);display:grid;place-items:center;font:700 22px/1 "Inter Tight",sans-serif}
+.sh h2{font-size:clamp(24px,3.4vw,32px);line-height:1.2;padding-top:6px}
+.sh .chip{margin-top:10px;display:inline-block}
+.sh .s-done{background:var(--g);color:var(--lime)}
+.sh .s-prog{color:var(--g2);box-shadow:inset 0 0 0 1.5px var(--g2)}
+.sh .s-plan{background:var(--soft);color:var(--mute);box-shadow:inset 0 0 0 1px var(--line)}
+p{margin:0 0 14px}
+.sub{font:700 19px/1.4 "Inter Tight","Noto Sans Thai","Noto Sans SC",sans-serif;margin:24px 0 10px;color:var(--g2)}
+.k{display:grid;grid-template-columns:auto minmax(0,1fr);gap:12px;margin:0 0 14px;padding:14px 16px;background:var(--soft);border-radius:10px}
+.k b{font:700 14px/1 "Inter Tight",sans-serif;background:var(--g);color:var(--lime);padding:6px 8px;border-radius:6px;height:max-content;margin-top:4px}
+.k p{margin:0}
+.cmd{margin:0 0 14px;padding:14px 18px;border-radius:10px;background:var(--codebg);border-left:4px solid var(--g2);font-size:16.5px}
+.cmd.bad{border-left-color:var(--coral);background:light-dark(#fff1ee,#2a1714)}
+.cmd small{display:block;font-size:13px;font-weight:600;color:var(--mute);margin-bottom:4px}
+ul.l{margin:0 0 16px;padding:0;list-style:none}
+ul.l li{position:relative;padding:10px 0 10px 26px;border-bottom:1px dashed var(--line)}
+ul.l li:last-child{border-bottom:0}
+ul.l li::before{content:"";position:absolute;left:4px;top:21px;width:10px;height:10px;border-radius:2px;background:var(--g2)}
+table{border-collapse:collapse;width:100%;margin:4px 0 18px;font-size:16px}
+th,td{text-align:left;padding:9px 12px;border-bottom:1px solid var(--line)}
+th{font-size:14px;color:var(--mute);font-weight:600}
+td.c{font-family:"Inter Tight",sans-serif;font-weight:700;white-space:nowrap}
+td .ar{color:var(--mute)}
+.flow{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin:6px 0 18px}
+.flow span{padding:10px 16px;border-radius:999px;background:var(--soft);border:1px solid var(--line);font-weight:600}
+.flow span:last-child{background:var(--g);color:var(--lime);border-color:var(--g)}
+.flow i{font-style:normal;color:var(--mute)}
+.orig{display:block;margin-top:6px;padding-left:10px;border-left:2px solid var(--line);font-family:"Noto Sans Thai",sans-serif;font-size:14.5px;line-height:1.75;color:var(--mute)}
+.top{display:inline-block;margin-top:10px;font-size:14px;color:var(--mute);text-decoration:none;min-height:44px;line-height:44px}
+footer{text-align:center;color:var(--mute);font-size:13px;padding:0 16px 40px}
+ .tl{max-width:1240px;margin:auto;padding:2px max(5vw,16px) 12px;overflow-x:auto;scrollbar-width:thin}
+.tl ol{position:relative;display:flex;justify-content:space-between;min-width:620px;margin:0;padding:0;list-style:none}
+.tl ol::before,.tl .fill{content:"";position:absolute;left:22px;right:22px;top:21px;height:3px;border-radius:3px;background:#0f6b5c}
+.tl .fill{right:auto;width:0;background:var(--lime);transition:width .3s}
+.tl li{position:relative;z-index:1;flex:none}
+.tl a{display:flex;flex-direction:column;align-items:center;gap:3px;width:44px;text-decoration:none;color:#cfe6dc;font-size:11.5px;line-height:1.2;text-align:center}
+.tl a span{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:#00352d;border:2px solid #2b8a76;font:700 15px/1 "Inter Tight",sans-serif;color:#cfe6dc;transition:background .2s,transform .2s}
+.tl a:hover span{border-color:var(--lime)}
+.tl a.past span{background:#0f6b5c;border-color:var(--lime);color:var(--lime)}
+.tl a.on span{background:var(--lime);border-color:var(--lime);color:var(--g);transform:scale(1.12)}
+.tl a:focus-visible{outline:none}.tl a:focus-visible span{outline:3px solid var(--coral);outline-offset:2px}
+figure{margin:6px 0 22px}
+.shots{display:grid;gap:12px}
+.shots.two{grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr))}
+.shot{display:block;padding:0;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--soft);cursor:zoom-in;width:100%}
+.shot img{display:block;width:100%;height:auto}
+figcaption{font-size:13.5px;color:var(--mute);margin-top:8px}
+.lb{position:fixed;inset:0;z-index:20;background:#000d;display:none;place-items:center;padding:16px;cursor:zoom-out}
+.lb.open{display:grid}.lb img{max-width:100%;max-height:100%;border-radius:8px;background:#fff}
+.lb button{position:absolute;top:12px;right:12px;width:44px;height:44px;border-radius:50%;border:0;background:#fff;color:#000;font-size:22px;cursor:pointer}
+@media(max-width:600px){.brand{width:100%}.seg button{min-width:0;padding:0 12px}.sn{width:42px;height:42px;font-size:18px}.k{grid-template-columns:1fr}td,th{padding:8px 6px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.card,.tl a span,.tl .fill{transition:none}}
+</style>
+</head>
+<body class="th">
+<div class="bar"><div class="in">
+  <span class="brand" id="brand"></span>
+  <label class="tog" id="tog" hidden><input type="checkbox" id="showOrig"><span id="togLbl"></span></label>
+  <div class="seg" role="group" aria-label="Language">
+    <button type="button" data-l="th" aria-pressed="true">ไทย</button>
+    <button type="button" data-l="zh" aria-pressed="false">中文</button>
+    <button type="button" data-l="en" aria-pressed="false">English</button>
+  </div>
+</div>
+<nav class="tl" aria-label="Timeline"><ol id="tl"><i class="fill" id="fill"></i></ol></nav>
+</div>
+<header class="band" id="top"><div class="in">
+  <h1 id="h1"></h1>
+  <p class="lead" id="lead"></p>
+  <nav class="board" id="board"></nav>
+</div></header>
+<main id="main"></main>
+<footer id="foot"></footer>
+<div class="lb" id="lb" role="dialog" aria-modal="true"><button type="button" aria-label="Close">×</button><img id="lbimg" alt=""></div>
+
+<script>
+{
+const UI={
+ th:{brand:'Performance Appraisals 2026',h1:'Performance Appraisals 2026 - Asthasit Boonmesap',lead:'เเตะที่ การ์ด เเต่ละหัวข้อเพื่อไปยังหัวข้อนั้น',top:'↑ กลับด้านบน',tog:'',fig:'รูปประกอบหัวข้อ {n}',foot:'ข้อความภาษาไทยคือต้นฉบับ · ภาษาจีนและอังกฤษเป็นฉบับแปล',
+  st:{done:'สำเร็จแล้ว',use:'ใช้งานจริงแล้ว',prog:'กำลังพัฒนา',test:'กำลังทดสอบ',hold:'ยังไม่สำเร็จ',plan:'แนวทาง / โครงสร้าง',pol:'นโยบายใหม่',go:'กำลังดำเนินการ'},
+  tb:['รหัส','Rating','จะได้ คือ'],tb2:['ชื่อเดิม','','Class จริง'],good:'สิ่งที่อยากสั่ง',bad:'สิ่งที่ไม่อยากต้องสั่ง',say:'ตัวอย่างคำสั่ง'},
+ zh:{brand:'Performance Appraisals 2026',h1:'Performance Appraisals 2026 - Asthasit Boonmesap',lead:'点击各主题的卡片，即可跳转到对应章节。',top:'↑ 返回顶部',tog:'显示泰文原文',fig:'第 {n} 节配图',foot:'泰文为原文 · 中文与英文为译文',
+  st:{done:'已完成',use:'已投入使用',prog:'开发中',test:'测试中',hold:'暂未成功',plan:'方案 / 结构',pol:'新政策',go:'进行中'},
+  tb:['代码','Rating','得到'],tb2:['原名称','','实际 Class'],good:'我们希望的指令',bad:'我们不想下达的指令',say:'指令示例'},
+ en:{brand:'Performance Appraisals 2026',h1:'Performance Appraisals 2026 - Asthasit Boonmesap',lead:'Tap a topic\'s card to jump to that section.',top:'↑ Back to top',tog:'Show Thai original',fig:'Figure for section {n}',foot:'Thai is the original text · Chinese and English are translations',
+  st:{done:'Done',use:'In use',prog:'In development',test:'Testing',hold:'Not yet successful',plan:'Approach / structure',pol:'New policy',go:'Ongoing'},
+  tb:['Code','Rating','Gives'],tb2:['Placeholder','','Actual class'],good:'What we want to say',bad:'What we don\'t want to have to say',say:'Example command'}
+};
+const P=(th,zh,en)=>({t:'p',th,zh,en});
+const K=(k,th,zh,en)=>({t:'k',k,th,zh,en});
+const S=(th,zh,en)=>({t:'sub',th,zh,en});
+const C=(v,th,zh,en)=>({t:'cmd',v,th,zh,en});
+const L=(...items)=>({t:'list',items});
+const I=(th,zh,en)=>({th,zh,en});
+
+const D=[
+{n:'1',st:'plan',title:I('Database for AI + Database for Company Standard','Database for AI + Database for Company Standard（面向 AI 的数据库 + 公司标准数据库）','Database for AI + Database for Company Standard'),
+ short:I('Database for AI + Company Standard','AI 数据库 + 公司标准数据库','Database for AI + Company Standard'),b:[
+ P('เป็นงาน การสร้าง database ในรูปแบบใหม่ เรียบเรียงโดยมี pattern เพื่อใช้ใน การสั่งงานผ่าน AI ได้ โดยไหนๆ เราจะสร้างเเล้ว เราจึง สร้าง เพื่อ เอามาใช้ กับ งาน ที่เป็น feed หรือ proposal ให้ได้ด้วยเลย',
+   '这是一项以全新形式构建数据库的工作，按照一定的模式（pattern）进行整理，以便能够通过 AI 下达工作指令。既然要构建，我们就顺便让它也能用于 Feed 或 Proposal 类的工作。',
+   'This work builds a database in a new format, organized around a pattern so that work can be instructed through AI. Since we are building it anyway, we are building it so it can also be used for Feed or Proposal work.'),
+ P('โดยสิ่งที่บรรจุอยู่ภายในคือ spec ทั้งหมด คือ  ASME standard + Component ของเราเอง พวก support CPPE + bend weld atta',
+   '其中包含全部规格（spec），即 ASME 标准 + 我们自己的组件（Component），例如 CPPE 支架（support）+ 弯头焊接附件（bend weld atta）。',
+   'It contains all the specs: the ASME standard + our own components, such as CPPE supports + bend weld attachments (bend weld atta).'),
+ S('ประโยชน์','优势','Benefits'),
+ K('1a','การสร้าง Database for AI ภายใต้ ระบบ Database มีการ เก็บข้อมูล หลากหลายรูปแบบมากๆ ซึ่ง ไม่เหมาะสม ที่จะนำมาใช้งานร่วมกับคำสั่ง ในอนาคต ยกตัวอย่างเช่น เรื่อง option ของ component',
+   '构建 Database for AI：在数据库系统中，数据以非常多样的形式存储，不适合与未来的指令配合使用，例如组件的选项（option）。',
+   'Building a Database for AI: inside the database system, data is stored in many different formats, which is not suitable for use with commands in the future — for example, component options.'),
+ P('สมมติ ในอนาคต หากเราสั่งงานผ่าน AI เรามีความจำเป็นที่จะสั่งงานว่า','假设将来我们通过 AI 下达工作指令，需要这样下达：','Suppose that in the future, when we instruct work through AI, we need to say:'),
+ C('good','ให้ วาดท่อ 6 นิ้ว จาก Equipment A -> Equipment B โดย ใช้ Class 6C605 โดยมีเงื่อนไขให้ ใช้ข้อต่อ ให้น้อยที่สุด หรือ ให้ใช้ระยะท่อที่สั้นที่สุด ระบบ AI',
+   '从 Equipment A -> Equipment B 绘制一根 6 英寸管道，使用 Class 6C605，条件是使用最少的管件，或使用最短的管道长度。AI 系统',
+   'Draw a 6-inch pipe from Equipment A -> Equipment B using Class 6C605, with the condition of using the fewest fittings, or the shortest pipe length. The AI system'),
+ P('เราคงไม่อยากที่จะต้องสั่งการว่า','我们并不想这样下达指令：','We would not want to have to say:'),
+ C('bad','ให้ วาดท่อ 6 นิ้ว จาก Equipment A -> Equipment B โดย ใช้ Class 6C605 โดย ข้องอ ต้องเป็น 90 องศา หน้า flange จะต้อง ใช้เป็น Raise face เเละ gasket ต้องเลือก Spiral Wound',
+   '从 Equipment A -> Equipment B 绘制一根 6 英寸管道，使用 Class 6C605，弯头必须为 90 度，法兰面必须使用 Raised Face，垫片必须选用 Spiral Wound。',
+   'Draw a 6-inch pipe from Equipment A -> Equipment B using Class 6C605, where the elbows must be 90 degrees, the flange face must be Raised Face, and the gasket must be Spiral Wound.'),
+ P('การที่  AI ของเรา จะทำการ ประมวลผลได้ บน คำสั่ง ที่ simple ได้ มันจำเป็น ต้องมี โครงสร้าง หลังบ้าน ที่ถูกสร้างมาเพื่อมันก่อน ให้ มันเข้าใจ การเก็บไฟล์ มันจะรู้ได้เองว่าเเต่ละ component มัน ควรจะเลือก option  เป็นอะไรบ้าง',
+   '要让我们的 AI 能够基于简单（simple）的指令进行处理，首先必须有专门为它构建的后端结构，让它理解文件的存储方式，这样它就能自己知道每个组件应该选择哪些选项。',
+   'For our AI to work from a simple command, it first needs a backend structure built for it, so it understands how the files are stored. Then it will know by itself which options each component should use.'),
+ K('1b','งาน ที่ เป็น Feed, Proposal ในอนาคตเรา สามารถที่จะ model เข้า ไปใน 3d ได้เลย เพื่อ การ take MTO , Iso Drawing ได้เลย เเละหากในอนาคต กรณีที่ feed, proposal กลายเป็น Job ได้ในอนาคต เรา จะได้ ไม่ต้องมาเริ่ม งานกันใหม่ ทาง admin จะกลายร่าง ข้อมูล ที่สร้างทั้งหมด เข้าสู่ state project ให้ได้เอง',
+   'Feed、Proposal 类工作：将来我们可以直接在 3D 中建模，以便直接统计 MTO、出 Iso Drawing。如果将来 Feed、Proposal 转为正式 Job，我们就不必重新开始，管理员（admin）会自行将所有已创建的数据转换为项目（project）状态。',
+   'Feed and Proposal work: in the future we can model directly in 3D to take MTO and produce Iso Drawings right away. And if a Feed or Proposal later becomes a Job, we will not have to start over — the admin will convert all the data already created into the project state.'),
+ P('เราใช้วิธีสร้าง Database ที่มี รหัส Class ค่าเริ่มต้น เเยกตาม Rating เเละรันตาม ความซ้ำซ้อน',
+   '我们的做法是：构建一个带有默认 Class 代码的数据库，按 Rating 区分，并按重复情况依次编号。',
+   'We do this by building a database with default class codes, separated by rating and numbered in sequence as they repeat.'),
+ {t:'map',h:'tb',rows:[['A','CL150','A01, A02, A03'],['B','CL300','B01, B02, B03'],['C','CL600','C01, C02, C03']]},
+ P('ผู้ใช้งาน จะเริ่มต้น model โดย เลือก place component จาก class ตาม PID ให้ตรงกับ Rating อย่างเดียวพอ สมมติมีการใช้งาน Class A01 , C01 , C02',
+   '用户开始建模时，只需按照 PID 从与 Rating 相符的 class 中选择并放置组件即可。假设使用了 Class A01、C01、C02。',
+   'Users start modelling simply by placing components from the class that matches the rating on the P&ID. Suppose classes A01, C01 and C02 are used.'),
+ P('พอวันที่ project เเล้ว จริง ๆ มี  CLASS ที่ใช้จริง คือ 1C133 , 6C605 , 6C633',
+   '到了真正成为项目的那天，实际使用的 CLASS 是 1C133、6C605、6C633。',
+   'When it actually becomes a project, the classes really used are 1C133, 6C605 and 6C633.'),
+ P('Admin จะแปลง ชื่อ class จาก','管理员（Admin）将 class 名称按如下方式转换：','The admin converts the class names from:'),
+ {t:'map',h:'tb2',rows:[['A01','→','1C133'],['C01','→','6C605'],['C02','→','6C633']]},
+ P('ถ้าทำแบบนี้ได้ จะทำให้ เราสามารถ ยึด Database เเบบนี้ นำไปสู่ทุก project ใหม่ ๆ ในอนาคต ได้ เร็วเเละ มีมาตรฐาน เดียวกัน เเละรองรับการเชื่อม ต่อ สู่ ยุคของ Assistant ใน software 3d version ถัดๆ ไป',
+   '如果能做到这一点，我们就能以这种数据库为基础，快速且以统一的标准推广到未来所有新项目，并支持连接到下一代 3D 软件中的 Assistant 时代。',
+   'If we can do this, we can carry this kind of database into every new project in the future — quickly and to one standard — and be ready to connect to the era of assistants in the next versions of 3D software.')
+]},
+{n:'2',st:'done',title:I('Conn Sheet in E3d Isometric Drawing','E3D 等轴测图（Isometric Drawing）中的 Conn Sheet','Conn Sheet in E3D Isometric Drawing'),
+ short:I('Conn Sheet in E3d Iso Drawing','E3D Iso 图中的 Conn Sheet','Conn Sheet in E3D Iso Drawing'),b:[
+ P('นี่คือ ปัญหา ที่เรา ค้างคามาอย่างยาวนานมาก ๆ เเละ ใช้ กำลัง คน เเละ เวลาไปมากจริงๆ กับการ เเต่ง Iso Drawing เพื่อ ให้ ได้มาซึ่ง ว่า pipe line นี้ ต่อ อยู่ กับ pipe line อะไร ในหน้า drawing ที่เท่าไหร่ ของ line ปลายทาง',
+   '这是一个长期悬而未决的问题，确实耗费了大量人力和时间去修改 Iso Drawing，只为弄清这条管线连接到哪条管线、位于目标管线的第几页图纸上。',
+   'This is a problem that has stayed unresolved for a very long time, and it has really cost a lot of manpower and time editing Iso Drawings to work out which pipeline a line connects to, and on which drawing page of the destination line.'),
+ P('โดยระบบ E3d นั้น การ Gen Iso เป็นเเบบระบบปิดที่มีความซับซ้อนอยู่มากเเละมีข้อจำกัดมาก ที่จะแก้ไข เพิ่มเติม หรือ ทำอะไรก็ตาม',
+   '在 E3D 系统中，Iso 的生成（Gen Iso）是一个封闭系统，非常复杂，想要修改、增加或做任何事都有很大限制。',
+   'In E3D, Iso generation is a closed system: very complex, and very limited when it comes to modifying it, adding to it, or doing anything else with it.'),
+ P('ในวันนี้ เราสามารถที่จะสร้างเครือข่ายของท่อทั้งหมดได้สำเร็จเเล้ว','如今，我们已经成功构建了所有管道的网络。','Today, we have successfully built the network of all the pipes.'),
+ P('โดยความยากของมันคือ การที่เราจะรู้ได้ว่า ท่อนี้จะต่ออยู่ กับ drawing อะไร เเละ เลขหน้าไหน','其难点在于：要知道这根管道连接到哪张图纸、哪一页。','The hard part is knowing which drawing, and which page number, a pipe connects to.'),
+ P('การจะได้เลขหน้าไหนนั้น แปลว่าเราจะต้อง','要得到页码，意味着我们必须：','Getting the page number means we must:'),
+ K('2a','สามารถ สั่ง การ gen Iso ของ line ทั้งหมดที่เกี่ยวข้องเอาไว้ก่อน','能够预先下达生成所有相关管线 Iso 的指令。','Be able to generate the Isos of all related lines in advance.'),
+ K('2b','เราสร้างตัวแปรใหม่เพื่อ บรรจุเลขหน้าของตัวมันเองเอา ไว้ใน Pipe ได้','我们创建了新的变量，用于在 Pipe 中存储其自身的页码。','We created a new variable that stores a pipe\'s own page number inside the Pipe.'),
+ K('2c','สร้าง ระบบ Gen iso ที่ล้อกับของเดิม ของ software เเต่อัพเกรดขึ้นมาเป็นการสั่ง Gen Iso บริเวณล้อมรอบทั้งหมดได้ทีเดียว','构建一个与软件原有功能相对应的 Gen Iso 系统，但升级为能够一次性生成周边全部区域的 Iso。','Build an Iso generation system that mirrors the software\'s original one, but upgraded to generate the Isos of the whole surrounding area in one go.'),
+ K('2d','แก้ไขวิธี  การเรียกค่าเหล่านี้เอาไปวาดลงบนกระดาษ เพราะ เราไม่สามารถเเทรกเเซงการวาดรูปลงบนการดาษใน Iso ได้เลย','修改调用这些数值并绘制到图纸上的方法，因为我们完全无法干预 Iso 在图纸上的绘图过程。','Change how these values are retrieved and drawn onto the sheet, because we cannot interfere with how Iso draws onto paper at all.'),
+ P('ทุกข้อ ล้วน เเต่ต้องใช้ ความสามารถที่สูงในการ จะสร้างได้ เเต่วันนี้เราทำได้เเล้ว เเละ ทำให้ ทุกคนไม่ต้องมานั่งไล่ เลขหน้า  drawing อีกเเล้ว กรณีที่ มีการ update pipe ที่ต่อเนื่องกันอย่างไม่รู้จบ',
+   '每一项都需要很高的能力才能实现，但今天我们已经做到了，让大家在相互连接的管道无休止地更新时，再也不用逐一追查图纸页码。',
+   'Every one of these takes a high level of skill to build, but today we have done it — and nobody has to chase drawing page numbers any more when connected pipes keep being updated without end.')
+]},
+{n:'3',st:'use',title:I('Software Back up server','服务器备份软件（Software Back up server）','Server backup software'),
+ short:I('Software Back up server','服务器备份软件','Server backup software'),b:[
+ P('Database งาน 3d เป็น สินทรัพย์ที่สำคัญของ project ทุกคนใช้ man hours ไปเพื่อทำงาน ให้ ได้ สินทรัพย์นี้มา งาน ใน ระดับ สูง ล้วน เเต่มีความจำเป็น ต้องมี ระบบ back up ที่มั่นใจได้ว่า สินทรัพย์นี้ มีความมั่นคง เพียงพอ เป็น หนึ่งใน requirement from owner ในระบบ สูง ที่จะถามหา ส่วนนี้กับเรา',
+   '3D 工作数据库是项目的重要资产，每个人都投入了工时（man hours）来获得这份资产。高水平的工作都需要可靠的备份系统，确保这份资产足够安全。这是高标准业主（owner）会向我们询问的要求之一。',
+   'The 3D database is one of a project\'s most important assets — everyone spends man-hours to produce it. High-level work always needs a backup system that guarantees this asset is secure enough, and it is one of the requirements that demanding owners will ask us about.'),
+ L(I('การใช้งาน free software มีความไม่ปลอดภัยเพียงพอ เราไม่สามารถ เเน่ใจเรื่อง การฝั่ง malware มาที่ ไฟล์ของเราเพื่อเรียกค่าไถ่ ได้','使用免费软件不够安全，我们无法确定是否会有恶意软件被植入我们的文件以进行勒索。','Free software is not secure enough: we cannot be sure malware won\'t be planted in our files for ransom.'),
+   I('ค่าใช้จ่ายระยะยาว หากเราต้องซื้อ software เพื่อ back up ก็เป็นค่าใช้จ่ายที่มากเช่นกัน','长期费用：如果我们必须购买备份软件，这也是一笔很大的开支。','Long-term cost: buying backup software would also be a large expense.'),
+   I('พื้นที่ในการจัดเก็บ สัมพันธ์กับความถี่ในการ back up ได้ สมมติ ว่า หากเรา ต้องการ back up ทุกอาทิตย์ เเละ server ใช้พื้นที่ ระดับ 1 TB หากเรา back up 1 ปี จะใช้ ถึง 52 TB ซึ่งเป็นไปไม่ได้เลย ที่เราจะมี พื้นที่ ขนาดนั้น เเละ เวลาที่ใช้ในการ copy ก็จะมาก เเละ หน่วงผู้คนที่ใช้งาน server ด้วย','存储空间与备份频率相关。假设我们每周备份一次，服务器占用约 1 TB，备份 1 年将需要 52 TB，我们根本不可能有那么大的空间，而且复制所需的时间也会很长，并拖慢使用服务器的人员。','Storage space grows with backup frequency. If we back up every week and the server holds about 1 TB, one year of backups would take 52 TB — space we could never have. Copying would also take a long time and slow down everyone using the server.'),
+   I('บน สถานการณ์ ความมั่นคงของ ข้อมูล ความ ปลอดภัย เป็นสิ่งที่ต้อง ตระหนักให้มากที่สุด cyber security เป็น สิ่งที่เราควรมี เพื่อ ความมั่นใจในระยะยาว','在数据安全形势下，安全是我们最需要重视的事情，网络安全（cyber security）是我们为了长期安心而应具备的。','Where data security is concerned, safety must come first; cyber security is something we should have for long-term confidence.'),
+   I('สร้างให้รองรับ ไฟล์ปริมาณมหาศาล ระดับ สิบล้านไฟล์ได้ ด้วย โครงสร้าง Rust ที่เอาไว้ รองรับ สำหรับอนาคตเเล้ว','以 Rust 架构构建，能够支持海量文件，达到千万级文件数量，为未来做好准备。','Built to handle huge numbers of files — tens of millions — on a Rust architecture ready for the future.')),
+ P('จากเหตุผลทั้งหมดนี้เองทำให้เราสร้าง software นี้ด้วยตัวเราเอง โดย เราสามารถ back up ได้ ถี่ เพราะเราระบบเราจะมีระบบคัดกรอง เฉพาะไฟล์ที่มีการเปลี่ยนเเปลงเท่านั้นใน server ที่จะ copy มาใหม่ เเละมี ระบบ export file name เพื่อ ค้นคว้าได้ว่า ไฟล์ ที่เรา เก็บ back up ไว้ มี ทั้งหมด กี่ version เเละ ง่ายในการ ค้นหา เพราะเป็น excel ไฟล์ ให้คนทั่วไปสามารถเข้าใจได้ด้วย',
+   '基于以上所有原因，我们自行开发了这款软件。我们可以高频备份，因为系统具有筛选机制，只复制服务器上有变更的文件；还有导出文件名（export file name）的功能，可以查询备份中的文件共有多少个版本，而且便于搜索，因为是 Excel 文件，普通人也能看懂。',
+   'For all these reasons we built this software ourselves. We can back up often because the system filters and copies only the files on the server that have changed. It also exports file names, so we can look up how many versions of each backed-up file we hold — and it is easy to search because it is an Excel file that anyone can understand.'),
+ P('เรา สามารถ ตั้งค่า ความถี่ ต่อ สัปดาห์ได้ โดย ปัจจุบัน เรา backup ทุกวัน อังคาร พฤหัส ศุกร์ ยกเว้น วันหยุด holiday นี่คือ ระบบ ที่เราทำได้ โดยอัตโนมัติ เเละเรายังรักษาระดับพื้นที่ เเละ เวลา ที่ใช้ในการ back up ให้สามารถทำได้จริง ถือว่าอยู่ในระดับสูงที่เราเพียงพอเเละน่าพอใจ',
+   '我们可以设置每周的备份频率，目前每周二、周四、周五进行备份，节假日（holiday）除外。这是我们实现的自动化系统，同时我们仍将备份所需的空间和时间控制在切实可行的范围内，我们认为已达到足够且令人满意的高水平。',
+   'We can set the frequency per week; currently we back up every Tuesday, Thursday and Friday, except holidays. This runs automatically, and we still keep the storage and time needed for backups practical — a high level that we consider sufficient and satisfying.'),
+ K('3.1','งาน relocate server นับเป็นงานที่เราได้ทดสอบ ระบบการ Back up software ของเราด้วยเพราะ ข้อมูล มีขนาดที่ใหญ่เเละเยอะมาก เเละก็สามารถใช้งานได้เป็นอย่างดี',
+   '服务器搬迁（relocate server）工作也算是对我们备份软件的一次测试，因为数据量非常大且数量繁多，而软件运行得非常好。',
+   'The server relocation also served as a test of our backup software, because the data was very large and voluminous — and it worked very well.')
+]},
+{n:'4',st:'use',title:I('การแก้ปัญหา เรื่องข้อจำกัดในการ remote desktop','解决远程桌面（remote desktop）的限制问题','Solving the limits of remote desktop'),
+ short:I('แก้ข้อจำกัด remote desktop','解决远程桌面限制','Solving remote desktop limits'),b:[
+ P('เดิมทีเราเลือกใช้ผู้ให้บริการ ฟรี อย่าง Anydesk ซึ่ง ก็ต้องยอมรับถึงข้อจำกัดมากมาย เเละความเสถียร ความปลอดภัย หรือ เเม้กระทั่งการปิดหน้าจอไม่ได้',
+   '最初我们选择使用免费的服务商，如 AnyDesk，不得不接受诸多限制，包括稳定性、安全性，甚至无法关闭屏幕。',
+   'Originally we used a free provider, AnyDesk, and had to accept many limitations in stability and security — we could not even turn the screen off.'),
+ P('นั่นเป็น การ หา solution ครั้งใหม่ คือ เราได้ตัดสินใจเพื่อ ทดสอบ หา วิธีในการ remote ที่มีความปลอดภัย เเละ เสถียรมากพอ ซึ่ง เราค้นคว้า เเละพบส่วนผสมที่ดีนั่นคือ มี 2 ส่วน',
+   '这促使我们重新寻找解决方案：我们决定测试一种足够安全且稳定的远程方式。经过研究，我们找到了一个很好的组合，分为 2 部分：',
+   'That led to a new search for a solution: we decided to test ways of remoting in that are secure and stable enough. After research we found a good combination in two parts:'),
+ K('4a','การสร้าง network เป็น ของตัวเราเอง หรือเราเรียก ว่า VPN ซึ่งในส่วนนี้เรา จำเป็น ต้องหา วิธี ที่ปลอดภัยมากพอ ในการสร้างเครือข่ายใหม่ นี้ขึ้นมา เเละเรา ไปใช้บริการของ Tailscale ซึ่งเป็น open-source ที่มีการ ตรวจสอบ เเละ อัพเกรดเรื่องการเข้ารหัสที่ปลายทาง ทำให้ไม่สามารถถูกดักระหว่างทางได้',
+   '建立我们自己的网络，也就是 VPN。在这部分，我们需要找到足够安全的方法来建立这个新网络，我们使用了 Tailscale 的服务，它是开源（open-source）的，在端到端加密方面经过审查和升级，因此无法在传输途中被截获。',
+   'Creating our own network — a VPN. Here we needed a secure enough way to build this new network, and we use Tailscale, which is open-source, audited and upgraded for end-to-end encryption, so traffic cannot be intercepted along the way.'),
+ K('4b','Software ที่ใช้ เพื่อ remote เราเลือกใช้ software ที่มีกับ Windows นั่นคือ Remote Desktop เพราะเราเชื่อว่า windows จะ update ความปลอดภัยให้ เรา เอง ตามที่เราได้ ซื้อเเละใช้งานบน Windows ของเเท้ตามลิขสิทธิ์',
+   '用于远程的软件：我们选择 Windows 自带的 Remote Desktop，因为我们相信 Windows 会为我们更新安全性，因为我们购买并使用的是正版授权的 Windows。',
+   'The remote software: we chose the one that comes with Windows, Remote Desktop, because we trust Windows to keep its security updated for us, since we bought and use genuine licensed Windows.'),
+ P('ปัจจุบัน เราสามารถใช้งาน remote desktop ได้ ทุก os ทุกเครื่อง เเล้ว ผ่านระบบที่ว่า ยกตัวอย่างเช่น ผมสามารถที่จะ เข้า ถึง เครื่อง PC ของผมเอง ได้เเบบปิดหน้าจอ เเละ มีเสถียรภาพ เเละ ที่สำคัญคือไม่มีค่าใช้จ่ายรายเดือน ปิดจุด่ออนทั้งหมดที่ Anydesk มีอยู่',
+   '目前，通过上述系统，我们已能在所有操作系统、所有电脑上使用 Remote Desktop。例如，我可以在关闭屏幕的情况下访问我自己的 PC，而且很稳定，最重要的是没有月费，弥补了 AnyDesk 存在的所有弱点。',
+   'Now we can use Remote Desktop on every OS and every machine through this setup. For example, I can reach my own PC with its screen off, it is stable, and most importantly there is no monthly fee — closing every weakness AnyDesk had.')
+]},
+{n:'5',st:'done',title:I('สร้าง Software Voice to Text เป็น  พื้นฐาน ที่สำคัญ','开发语音转文字（Voice to Text）软件，作为重要基础','Building Voice to Text software as a key foundation'),
+ short:I('Software Voice to Text','语音转文字软件','Voice to Text software'),b:[
+ P('หลังจากที่เรา ได้ เริ่มใช้งาน การ Prompt AI มาสักพัก เเล้ว เราจะพบว่า คอขวดที่สำคัญของการ Prompt คือ เราพิมพ์ ช้ากว่าที่เราพูด มากๆ',
+   '在我们开始使用 AI Prompt 一段时间后，会发现 Prompt 的主要瓶颈是：我们打字比说话慢得多。',
+   'After prompting AI for a while, we found that the main bottleneck of prompting is that we type far slower than we speak.'),
+ P('เราพบว่า การที่งานเราจะเร็วได้นั้นเราจะต้อง สามารถสั่งงานด้วยเสียงได้นั่นคือ ที่มา','我们发现，要让工作变快，就必须能够用语音下达指令，这就是起因。','We realised that for our work to be fast, we must be able to give instructions by voice — that is where this came from.'),
+ P('เเละ หาก เราต้องการ นำไปสู่ การสั่งงานด้วยเสียงเข้าไปยัง Software ต่างๆ ที่ cursor ของเรา ไปอยู่ได้ทั้งหมด ไม่ว่าจะเป็น Notepad, E3d , Autocad ทุกอย่างสามารถพูดได้ทั้งหมดเเล้ว',
+   '而且我们希望将语音指令带入光标（cursor）所在的所有软件中，无论是 Notepad、E3D 还是 AutoCAD，现在全部都可以用说的了。',
+   'And we wanted voice input to work in any software where our cursor is — Notepad, E3D, AutoCAD — and now everything can be spoken into.'),
+ P('เดิมที Software ประเภทนี้ ต้องใช้บริการ ผ่าน service ที่เสีย ค่า subscribe อย่างเช่น  Wispr Flow เราจึงจำเป็น ต้อง สร้างเองขึ้นมาให้ เเพร่หลายได้มากพอ เพื่อ ให้ องค์กรเราได้ใช้กันทุกคน',
+   '原本这类软件需要付费订阅服务，例如 Wispr Flow，因此我们必须自行开发，使其足够普及，让我们组织里的每个人都能使用。',
+   'Software like this used to require a paid subscription service such as Wispr Flow, so we needed to build our own so it could spread widely enough for everyone in our organization to use.'),
+ P('ในส่วนนี้เราสร้าง software เป็นของเราเอง โดยนำ Local AI มาใช้ในการ detect ภาษา เพื่อความเเม่นยำ ในการ ใช้งานร่วม เเละมีโอกาสที่จะเก่งขึ้นได้ในอนาคต เพราะ Model Local ที่เรานำมาใช้งานหลังบ้านเราสามารถเลือกที่ถนัดเเต่ละภาษาได้เอง เเม่นยำหลากหลาย เเตกต่างกัน',
+   '这部分我们开发了自己的软件，采用本地 AI（Local AI）来识别语言，以提高使用时的准确性，并且将来还有机会变得更强，因为后端使用的本地模型可以按各语言的擅长程度自行选择，准确度各不相同。',
+   'We built our own software for this, using Local AI to detect language for accuracy, with room to improve in the future — because for the local model running in the backend we can pick whichever is best at each language, with varying accuracy.'),
+ P('software  นี้สร้างเสร็จเเล้ว รองรับ 3 ภาษา ไทย จีน อังกฤษ โดย เราสามารถใช้งาน เเบบ มี AI หรือ ไม่มี AI ก็ได้ เพราะ PC หลายเครื่องของเรานั้นยังไม่มี เเรมมากพอที่รัน Local AI ที่ใช้เพื่อความฉลาดในการ detect มากขึ้น ก็จะเป็นความฉลาดได้เท่าที่เราพูด ตรงไปตรงมาเท่านั้น',
+   '该软件已开发完成，支持泰语、中文、英语 3 种语言，可以在有 AI 或无 AI 的模式下使用，因为我们许多 PC 的内存（RAM）还不足以运行用于更智能识别的本地 AI；无 AI 时，其智能程度就仅限于我们说话的字面内容。',
+   'The software is finished and supports three languages: Thai, Chinese and English. It can be used with or without AI, because many of our PCs do not yet have enough RAM to run the Local AI that makes detection smarter; without it, it is only as smart as exactly what we say, word for word.')
+]},
+{n:'6',st:'hold',title:I('เรื่องการทำ Local AI','关于本地 AI（Local AI）','Local AI'),
+ short:I('เรื่องการทำ Local AI','本地 AI','Local AI'),b:[
+ P('พยายามศึกษาเพื่อ หาความเป็นไปได้ในการใช้ทรัพยากร เครื่อง PC ที่ผมมีอยู่ เพื่อ ทดสอบ ความสามารถในการ ทำงานง่ายๆ เช่น การสรุป PDF, การถอดข้อความจากรูปภาพ เช่น เรา ต้องการinput ITB เข้าไป เพื่อ ได้ ข้อควรระวัง หรือ สรุป ให้เราเข้าใจโปรเจคนั้นโดยเร็วเเละ เป็น ระบบข้อมูลที่ถูกเก็บมาในรูปแบบที่ในอนาคตเราจะเอา สิ่งนี้ input เข้า software model ของเรา เพื่อให้ สมอง AI ของเรา ออกเเบบใน รูปแบบ ที่ตาม requirement ของ ITB ได้ เเละ ข้อมูลไม่รั่วไหลออกไปยังภายนอก ของ บริษัทเพราะ ITB มีความ ต้องระมัดระวังในการ ใช้บริการ AI ภายนอก เป็นอย่างมาก',
+   '尝试研究利用我现有 PC 资源的可能性，以测试完成简单工作的能力，例如总结 PDF、从图片中提取文字。比如我们想输入 ITB，以获得注意事项或摘要，让我们快速了解该项目；并作为一种数据系统，以将来可以输入到我们的建模软件中的形式存储，让我们的 AI 大脑能够按照 ITB 的要求进行设计，同时数据不会泄露到公司外部，因为 ITB 在使用外部 AI 服务时需要格外谨慎。',
+   'I tried to study whether the PC resources I have could handle simple tasks, such as summarising PDFs and extracting text from images. For example, we want to feed in an ITB and get the points to watch out for, or a summary so we understand the project quickly — stored as data in a form we can later feed into our modelling software, so our AI brain can design to the ITB\'s requirements — without data leaking outside the company, because ITBs call for great caution with external AI services.'),
+ P('โดยในส่วนนี้เราเริ่มจาก Ollama เป็น Software พื้นฐานก่อนเพื่อ เอา Free Model อย่าง Qwen, Kimi, Deepseek นำมาทดสอบ ความเป็น ไปได้ในงานนี้',
+   '这部分我们先以 Ollama 作为基础软件，引入 Qwen、Kimi、DeepSeek 等免费模型来测试这项工作的可行性。',
+   'We started with Ollama as the base software, bringing in free models such as Qwen, Kimi and DeepSeek to test whether this work is feasible.'),
+ P('ยังทำงานส่วนนี้ได้ไม่สำเร็จ เราติดหลายปัจจัย เช่น เรื่อง spec pc ของเรา ไม่ถึงพอ ที่จะรัน ,ความจำของเเรม เราน้อยเกินไป ที่จะให้ มัน input pdf ระดับหลายๆ หน้า เข้าไปได้',
+   '这部分工作尚未成功，我们受到多个因素的制约，例如我们的 PC 配置不足以运行，内存太小，无法输入多页的 PDF。',
+   'This part has not succeeded yet. We are held back by several factors: our PC specs are not enough to run it, and our RAM is too small to take in PDFs of many pages.'),
+ P('เราอาจจะจำเป็นต้องรอในอนาคต ที่ Local AI ใช้ทรัพยากรน้อยกว่านี้ จึงจะเหมาะสม ในการ สร้างเพราะตอนนี้ เรื่อง GPU RAM มีราคาที่สูงมาก เเละ หาได้ยาก เกินไป',
+   '我们可能需要等待将来本地 AI 占用更少资源时，才适合开发，因为目前 GPU 内存价格非常高，而且太难买到。',
+   'We may need to wait until Local AI needs fewer resources before it makes sense to build, because GPU RAM is currently very expensive and too hard to find.')
+]},
+{n:'9',st:'pol',title:I('Policy for delivery E3d Project','E3D 项目交付政策（Policy for delivery E3D Project）','Policy for delivery of E3D projects'),
+ short:I('Policy for delivery E3d Project','E3D 项目交付政策','E3D project delivery policy'),b:[
+ P('ตั้งเเต่เริ่มทำงาน Database มาเรา ไม่เคยที่จะส่งมอบ Database ให้ กับลูกค้าเราเลยเเม้เเต่ครั้งเดียว เเละ โครงสร้าง ของเก่า ของเราพบว่า Database มีการ ถูกสร้างมาให้ อ้างอิง ถึงโปรเจคที่ซ้ำซ้อนกันไปหมด เช่น งาน Project A ไปผูกอยู่ กับ Project B,C,D',
+   '自从开始做数据库工作以来，我们从未向客户交付过一次数据库。而且我们发现旧的结构中，数据库被构建为相互引用、重叠交错的项目，例如 Project A 与 Project B、C、D 绑定在一起。',
+   'Since we began database work, we have never once delivered a database to a client. And we found that in our old structure, databases had been built referencing one another across projects — for example Project A tied to Projects B, C and D.'),
+ P('ซึ่งพอเราจะส่ง Project A อย่างเดียวเราจะติดปัญหาว่างานของ owner B ก็จะต้องถูกส่งไปด้วย โดยที่ หากไม่เเนบไปจะทำให้ ไฟล์ Project A เปิดใช้งานไม่ได้ที่ปลายทาง นั่นเลย เป็น เหตุผลให้ ต้อง จัดระเบียบ  Database ไฟล์ ใหม่ ทั้งหมด ให้เเยกออกจากกัน',
+   '因此当我们只想发送 Project A 时，就会遇到问题：业主 B 的工作也必须一起发送，如果不附上，Project A 的文件在接收端就无法打开。这就是我们必须重新整理全部数据库文件、使其相互分离的原因。',
+   'So when we wanted to send only Project A, we hit the problem that owner B\'s work would have to go too — without it, the Project A files would not open at the destination. That is why we had to reorganise all the database files so they are separate from each other.'),
+ P('พร้อมกับ กำหนด Policy ขึ้นมาใหม่ ทั้งหมดในการ จะเตรียมไฟล์ เพื่อส่งออกมอบให้กับ owner ยกตัวอย่างเช่น การ สร้าง Macro file',
+   '同时全面重新制定准备导出并交付给业主的文件的政策，例如创建 Macro 文件',
+   'At the same time we defined a whole new policy for preparing files to export and hand over to the owner — for example, creating a Macro file'),
+ P('เพื่อใช้ในการ จัดเรียง component ที่ใช้ใน Project นี้เท่านั้น หรือ เพื่อ สร้าง user ให้กับ owner เพื่อใช้ในการ Log in เเละ มีการป้องกัน การเข้าถึง Catalogue ที่ล้วนเเต่เป็น know-how ของเราทั้งนั้นในการ ใช้สร้าง  Component ต่างๆ มา',
+   '用于只整理本项目中使用的组件，或为业主创建用于登录（Log in）的用户（user），并防止访问 Catalogue，因为 Catalogue 全都是我们用来创建各种组件的专有技术（know-how）。',
+   'to arrange only the components used in that project, or to create a user for the owner to log in with, while protecting access to the Catalogue — which is entirely our own know-how for building the components.')
+]},
+{n:'10',st:'prog',title:I('Install Project and Launcher','项目安装与启动器（Install Project and Launcher）','Install Project and Launcher'),
+ short:I('Install Project and Launcher','项目安装与启动器','Install Project and Launcher'),b:[
+ P('เป็น โครงการ พัฒนาที่ทำให้ การ log in เชื่อมต่อ server project มายังเครื่องของ Designer ทุกเครื่องไม่ต้อง Install ทีละ Project เเละ ทีละเครื่อง',
+   '这是一个开发项目，使设计师（Designer）的每台电脑在登录并连接项目服务器时，无需逐个项目、逐台电脑地安装。',
+   'A development project that lets every Designer\'s machine log in and connect to the project server without installing one project at a time, one machine at a time.'),
+ P('โดยที่ เรามี Project หลากหลาย จาก หลายแหล่งที่มา ทั้งเก่า เเละใหม่ หลาย Project ต้องการ การ Install Project ลงมายังเครื่อง',
+   '我们有来自多个来源的大量项目，有旧有新，许多项目需要安装到电脑上。',
+   'We have many projects from many sources, old and new, and many of them need to be installed onto machines.'),
+ P('เเละ การ Log in เข้า Project หรือ Switch Project ง่าย มากขึ้น','并且让登录项目或切换项目（Switch Project）更加容易。','And logging into a project or switching projects becomes much easier.'),
+ P('เเละในการจัดการ Project พร้อมกัน โดยเริ่ม จาก ของ Admin ก่อน ซึ่งในอนาคต เราจะต่อยอดเป็น Launcher คือ',
+   '同时便于同时管理多个项目，首先从管理员（Admin）开始。将来我们将进一步发展为启动器（Launcher），即',
+   'It also helps manage projects in parallel, starting with the Admin side. In the future we will extend it into a Launcher, which'),
+ P('จะเป็น หน้า Log in ที่สามารถเข้า ได้ ทุก Project โดย ไม่ต้อง กรอกค่า Username , Password ซ้ำซ้อนหลายที',
+   '一个可以进入所有项目的登录页面，无需多次重复输入 Username、Password。',
+   'will be a single login page that opens every project without typing the Username and Password again and again.'),
+ P('อยู่ในระหว่าง พัฒนา หน้า Launcher เเต่ระบบ หลังบ้าน จัดรูปแบบ ให้ เป็นไปได้ทั้งหมด เรียบร้อย รอไว้เเล้ว',
+   'Launcher 页面正在开发中，但后端系统已全部整理完毕，使一切成为可能，已准备就绪。',
+   'The Launcher page is still in development, but the backend has been fully arranged to make all of this possible and is ready and waiting.')
+]},
+{n:'12',st:'test',title:I('E3d Bridge','E3D Bridge','E3D Bridge'),
+ short:I('E3d Bridge (MCP)','E3D Bridge（MCP）','E3D Bridge (MCP)'),b:[
+ P('นี่คือ ส่วน MCP ที่สำคัญ ที่เราสร้างได้เอง ก่อนการที่ เราจะ ให้ AVEVA เป็นผู้ทำออกมา',
+   '这是我们自行构建的重要 MCP 部分，抢在 AVEVA 推出之前。',
+   'This is the important MCP piece that we built ourselves, before waiting for AVEVA to release one.'),
+ P('ในความคิดเริ่มเเรกตอนประมาณกลางปีนั้น คือเรา ต้องการสื่อสาร กับ E3d เป็น ภาษามนุษย์ เพื่อเข้าไปสั่งงาน  ใน  software เเต่ใน version ปัจจุบันนั้น ยังไม่สามารถทำเเบบนี้ได้ เเต่เราเชื่อว่า หากเราเข้าใจ สถาปัตยกรรมหลังบ้านมากพอเราน่าจะติดต่อสื่อสารได้',
+   '最初的想法大约在年中：我们希望用人类语言与 E3D 沟通，进入软件内部下达工作指令。但目前的版本还无法做到，不过我们相信，只要足够了解其后端架构，就应该能够与之通信。',
+   'The original idea, around mid-year, was that we wanted to talk to E3D in human language to give it commands inside the software. The current version cannot do this yet, but we believed that if we understood the backend architecture well enough, we should be able to communicate with it.'),
+ P('ซึ่งตอนนี้ เราสำเร็จในการสร้าง ไฟล์ ที่เป็น dll ไฟล์ เเละเรานำไฟล์ นี้ ลงไปใน software ปกติ เราจะพบว่า เราสามารถ สั่งการจาก ภายนอก ผ่านหลังบ้าน ได้จริงๆ',
+   '现在我们已成功构建了一个 dll 文件，将该文件加载到普通软件中后，我们发现确实能够通过后端从外部下达指令。',
+   'We have now succeeded in building a DLL file. When we load it into the normal software, we find we really can control it from outside, through the backend.'),
+ P('ตอนนี้เราสามารถสั่งการ ด้วยข้อความผ่านช่องที่เราสร้างขึ้นมาเองใน software เพื่อสั่งให้ E3d Model ได้ตามที่สั่งการเเล้ว เริ่มจากการสั่งการง่ายๆ ก่อน โดยยังไม่ซับซ้อนในการเชื่อมต่อ สมอง จาก Model ระดับ Frontier เพราะเราไม่มีเงินจ่ายค่า Subscribe รายเดือน เพื่องานขนาดนี้ ยกตัวอย่างคือ',
+   '现在我们可以通过在软件中自建的输入框，用文字下达指令，让 E3D 按指令建模。先从简单的指令开始，暂不涉及连接 Frontier 级模型大脑的复杂性，因为我们没有钱为这种规模的工作支付月度订阅费。例如：',
+   'We can now type commands into a box we built inside the software and have E3D model what we ask. We started with simple commands, without the complexity of connecting a Frontier-level model as the brain, because we do not have the money for a monthly subscription for work of this size. For example:'),
+ P('เราสามารถสั่งการในช่องว่า','我们可以在输入框中下达：','We can type in the box:'),
+ C('say','"ช่วยวาดท่อขนาด 6 นิ้ว โดย route เหมือนกับ ท่อ ที่วางอยู่ข้างๆ "','“帮我画一根 6 英寸的管道，走向（route）与旁边已有的管道相同。”','"Draw a 6-inch pipe routed the same as the pipe next to it."'),
+ P('เเต่หากในอนาคตเรามีสมองที่ฉลาดมากพอเราจะสามารถสั่งการได้ว่า','而将来如果我们拥有足够聪明的大脑，就可以下达：','But in the future, with a smart enough brain, we could say:'),
+ C('say','"ช่วยวาดท่อ เพื่อหลบหลีก เเละ รองรับ ตามมาตราฐานการออกเเบบ ของ ASME เเละ requirement ของ project นี้ ด้วย"','“帮我画管道，避开障碍，并符合 ASME 设计标准和本项目的要求（requirement）。”','"Draw a pipe that avoids clashes and meets ASME design standards and this project\'s requirements."'),
+ P('สิ่งนี้จะเป็น อนาคตของการ ออกเเบบ ที่หากเราเชื่อมต่อ Local AI เข้ามาได้ จะยิ่งทำให้ การออกเเบบของเรานั้น สะดวกเเละรวดเร็วขึ้นมาก เราอาจได้เปลี่ยน การเริ่มการออกเเบบท่อ เดิมที จาก 2D ไปเริ่ม ที่ 3D ทันทีเลย',
+   '这将是设计的未来。如果能接入本地 AI，我们的设计将更加便捷、快速得多，我们甚至可能把管道设计的起点从原来的 2D 直接改为从 3D 开始。',
+   'This is the future of design. If we can connect Local AI, our design work will become far more convenient and fast — we might even move the start of pipe design from 2D straight to 3D.'),
+ P('เเต่ด้วยความสามารถปัจจุบันที่เราทดสอบได้นี้ ก็สามารถทำให้ user ที่ใช้งาน อาจจะไม่จำเป็น ต้องมีความถนัดเฉพาะทาาง กับ Software ใด Software หนึ่งเเล้ว เพราะเค้าสามารถสั่งการด้วยภาษาพูดได้เลย ไม่จำเป็นต้องชำนาญในระดับ Technical เเล้ว ว่า ถ้าจะวาดท่อต้องกดปุ่มไหนใน software E3D',
+   '但即使是我们目前测试出的能力，也能让用户不再需要专精于某一款软件，因为他们可以直接用口语下达指令，无需达到技术层面的熟练程度，去了解在 E3D 软件中画管道要按哪个按钮。',
+   'Even with the capability we have tested today, users may no longer need to specialise in any one piece of software, because they can give commands in plain spoken language — no technical-level expertise needed to know which button in E3D draws a pipe.')
+]},
+{n:'13',st:'prog',title:I('3D Model Editor','3D Model Editor','3D Model Editor'),
+ short:I('3D Model Editor','3D Model Editor','3D Model Editor'),b:[
+ P('นี่คือ Software ที่เราสร้างเอง เพื่อใช้ในการ Read / Write Database','这是我们自行开发的软件，用于读取/写入（Read / Write）数据库。','This is software we built ourselves to Read / Write the database.'),
+ P('ให้เราลองจินตนาการ ถึง ว่า หาก เรามีไฟล์ .xlsx เราเเทบจะไม่มีทางอื่นเลย ที่จะหา software ที่ไม่ใช่ Excel ในการเปิดไฟล์นี้เพื่อ อ่าน เเละ เขียน ลงไปได้ กับ ไฟล์ Database ก็เป็น อย่างนั้นเช่นกัน',
+   '请想象一下，如果我们有一个 .xlsx 文件，除了 Excel 之外，几乎没有其他软件可以打开这个文件进行读写。Database 文件也是如此。',
+   'Imagine you have an .xlsx file: there is almost no software other than Excel that can open it to read and write. The database files are the same.'),
+ P('เราอยากที่จะเเค่เปิด Model Project เก่า เพื่อดูเรายังจำเป็น ต้องใช้ License เลย','我们只是想打开旧的项目模型看一看，仍然需要 License。','Just to open an old project model and look at it, we still need a license.'),
+ P('ดังนั้น เราจึงตั้งเป้าหมายเริ่มจากเเค่ให้ สามารถ เปิด อ่านไฟล์ ให้ได้ก่อน เเละไฟล์ไม่เสียหาย การที่หากเราทำได้นั้นก็ทำให้ปัญหาการเเย่งใช้งาน License ของ project เก่า กับ Project ใหม่ ลดลง ด้วย',
+   '因此我们设定的目标是：先从能够打开读取文件、且文件不受损开始。如果能做到这一点，也能减少旧项目与新项目争用 License 的问题。',
+   'So our first goal was simply to open and read the files without damaging them. If we can do that, it also reduces the fight over licenses between old and new projects.'),
+ P('ผลพลอยได้ที่เราได้รับไปด้วยคือ จะทำให้เราเข้าใจ โครงสร้างทั้งหมด ของไฟล์ Database ที่เราเก็บ ด้วยว่าข้างในนั้นบรรจุอะไรเอาไว้อยู่บ้าง เเละ Software E3d มีกลไกอย่างไรในการเรียกอ่านไฟล์นี้',
+   '我们同时获得的附带收获是：能够理解我们所存储的 Database 文件的整体结构，了解其中包含了哪些内容，以及 E3D 软件是通过怎样的机制读取这些文件的。',
+   'A by-product is that we come to understand the whole structure of the database files we keep — what they contain, and how E3D\'s mechanism reads them.'),
+ P('ปัจจุบันงานนี้ของเรา สำเร็จในส่วน อ่านเเละเขียน เเล้ว เรากำลัง พัฒนา UI/UX เพื่อ ให้ การใช้งาน ของ USER เราง่ายขึ้นปิดข้อบกพร่อง ข้อจำกัดของ Software E3d ที่ให้เราไม่ได้มาโดยตลอด',
+   '目前这项工作在读取和写入方面已经成功，我们正在开发 UI/UX，让用户使用更便捷，弥补 E3D 软件一直以来未能提供给我们的缺陷与限制。',
+   'Reading and writing now work. We are developing the UI/UX to make it easier for our users, closing gaps and limitations that E3D has never been able to give us.'),
+ P('เเต่เราต้องเข้าใจก่อนว่า เรายังห่างไกลในการจะเทียบว่า Software เรา จะมีความสามารถเทียบเท่า E3d ได้เพราะ Software ประกอบด้วยหลาย Module เเละ Feature เยอะมากๆ ที่ใช้ Developer ระดับ องค์กรเป็นคนสร้างขึ้นมา สะสมมานานนับเป็น สิบปี',
+   '但我们首先要明白，要说我们的软件能力与 E3D 相当，我们还相距甚远，因为该软件由众多模块（Module）和大量功能（Feature）组成，由企业级开发者构建，积累了十多年。',
+   'But we must be clear that we are still far from software that matches E3D, because E3D is made of many modules and a huge number of features, built by enterprise-level developers over more than a decade.'),
+ P('ปัจจุบัน เรา สร้างถึงการ สร้าง Iso Drawing PDF ไฟล์ได้ซึ่งส่วนนี้มีความสำคัญเพราะในหน้างานจริงยังใช้ส่วน เอกสาร 2d ในการ ทำงาน หากเราทำส่วนนี้ไม่ดี ก็เหมือน Product เรา ไม่มีคุณภาพเพียงพอ เเต่ส่วนนี้ยากมากในการแกะโครงสร้างของมัน เเต่เรายังพยายามอยู่',
+   '目前我们已做到能够生成 Iso Drawing PDF 文件，这部分非常重要，因为现场实际工作仍使用 2D 文档。如果这部分做得不好，就等于我们的产品质量不够。这部分的结构非常难以破解，但我们仍在努力。',
+   'We have now reached the point of producing Iso Drawing PDF files. This matters because site work still runs on 2D documents; if we do this poorly, our product is not good enough. Working out its structure is very hard, but we are still trying.'),
+ S('vision ที่สำคัญของโครงการ นี้','本项目的重要愿景','The key vision of this project'),
+ P('นอกจากเราจะมี Software 3d เป็น ของเราเองเเล้ว เราจะสามารถ สร้าง Environment system ของ องค์กรเราเองได้',
+   '除了拥有我们自己的 3D 软件之外，我们还能构建我们组织自己的环境系统（Environment system）。',
+   'Besides having our own 3D software, we will be able to build our organization\'s own environment system.'),
+ P('ยกตัวอย่างเช่นงาน ปกติ เราจะต้อง Generated 2D ออกมาเป็นไฟล์เพื่อเข้า Autocad ในการเเต่งไฟล์ ออกมาเช่น GA Drawing หรือ Iso Drawing ตามเเบบที่เราต้องมาให้ Dimension หรือ Boarder ก็ตาม นั่นเป็นเพราะว่า E3d นั่นเค้าไม่มีทางรู้เลยว่าบริษัทเราต้องการเเต่ง Drawing เป็นเเบบไหน ทำให้ เราจึง Gen ออกมาได้เเบบ Plain เท่านั้น เเต่หาก Software 3d เราเป็น คนสร้างได้เอง อย่างน้อยเราสามารถใช้งาน Software นี้ของเราเพื่อ Gen GA ,Iso. เเล้ว ออกมา เเต่งน้อยที่สุดได้เลย ทันที',
+   '例如在日常工作中，我们必须先生成 2D 文件导入 AutoCAD 进行修改，例如 GA Drawing 或 Iso Drawing，按要求添加尺寸标注（Dimension）或图框（Border）。这是因为 E3D 根本无法知道我们公司想要什么样式的图纸，所以我们只能生成朴素（Plain）的图纸。但如果 3D 软件由我们自己构建，至少我们可以用自己的软件生成 GA、Iso，并立即输出只需最少修改的图纸。',
+   'For example, in normal work we have to generate 2D files and take them into AutoCAD to finish them — GA Drawings or Iso Drawings — adding dimensions or borders as required. That is because E3D has no way of knowing how our company wants drawings styled, so it can only generate them plain. But if we build the 3D software ourselves, we can at least use it to generate GA and Iso drawings that need minimal editing straight away.'),
+ P('เหมือน เรา สามารถสร้าง E3d เเละ Autocad ของ บริษัทเราเองได้ ทั้งคู่ ทุกอย่างก็จะ Seamless ที่สุด',
+   '就好像我们能够同时打造属于我们公司自己的 E3D 和 AutoCAD，一切都将尽可能无缝衔接（Seamless）。',
+   'It would be like building our company\'s own E3D and AutoCAD — both of them — and everything would be as seamless as possible.')
+]},
+{n:'14',st:'test',title:I('Software CAD ที่เป็น Opensource','开源 CAD 软件','Open-source CAD software'),
+ short:I('Software CAD Opensource','开源 CAD 软件','Open-source CAD'),b:[
+ P('เราทดสอบ เรื่อง Software CAD ที่ เป็น Opensource เพื่อ จะนำมา Fork ในงาน ของเรา เเละพัฒนาต่อในเเบบของเรา เพื่อ มารองรับการเเต่ง 2D ที่ได้มาจาก 3D Model Editor ของเราเอง',
+   '我们测试了开源（Opensource）CAD 软件，以便将其 Fork 用于我们的工作，并按我们的方式继续开发，以支持编辑来自我们自己的 3D Model Editor 的 2D 图纸。',
+   'We are testing open-source CAD software to fork for our work and develop further in our own way, to support editing the 2D output that comes from our own 3D Model Editor.'),
+ P('การที่เรานำไปสู่ product 2D ที่เป็น สไตล์ของบริษัท เราเองได้ เรามีความจำเป็น จะต้องสร้าง software cad เพื่อ รองรับไฟล์ที่มาจาก 3D Model Editor ได้โดยตรง',
+   '要实现具有我们公司自己风格的 2D 产品，我们必须开发 CAD 软件，以直接支持来自 3D Model Editor 的文件。',
+   'To deliver 2D products in our company\'s own style, we need CAD software that takes files from the 3D Model Editor directly.')
+]},
+{n:'15',st:'go',title:I('Cowork -> AI Agent','Cowork -> AI Agent','Cowork -> AI Agent'),
+ short:I('Cowork -> AI Agent','Cowork -> AI Agent','Cowork -> AI Agent'),b:[
+ P('ภายในเวลา ไม่กี่ เดือน เราเดินทางมาถึง ยุค AI ยุคที่ 3 เเล้ว','在短短几个月内，我们已经走到了 AI 的第 3 个时代。','Within just a few months, we have arrived at the third era of AI.'),
+ {t:'flow',v:['Chat box','Cowork','Agent']},
+ P('การ ที่เราสามารถสร้าง ทุกอย่างได้พร้อมกันเเละมี ประสิทธิภาพ ได้ขนาดนี้ เพราะเรา ได้มาสู่ยุคการสั่งงาน เเบบ มี Agent ในการ ไป รับผิดชอบงานส่วนต่างๆ ตามเเต่ละส่วน ของ โครงการทั้งหมดที่เราจะทำได้',
+   '我们之所以能够同时、如此高效地构建所有这些东西，是因为我们已进入以 Agent 下达工作的时代，由 Agent 负责我们所能开展的全部项目中的各个部分。',
+   'We can build all of this at the same time, and this effectively, because we have entered the era of giving work to Agents, each responsible for its own part of all the projects we take on.'),
+ P('เพื่อ ให้ เรา เป็น ผู้ทีมีความมั่นคงทางด้านงาน ออกเเบบ เป็น จุดเเข็ง ที่เเข่งขันได้ในโลก ระดับอุตสาหกรรมเดียวกัน',
+   '让我们在设计工作方面具备稳固的实力，成为能在同行业全球范围内竞争的优势。',
+   'So that we are strong and secure in design work — a strength that can compete globally within our industry.'),
+ P('เราจึงต้องทำทุกอย่างเป็นระบบเเละสอดรับกัน เเละเฉพาะเจาะจงกับ บริษัท ของเราเท่านั้น ไม่ช้าก็เร็ว ทุก บริษัทย่อมมี Software ที่สร้างมาเฉพาะตัวเองอยู่ดี',
+   '因此我们必须让一切系统化、相互协调，并专门针对我们公司。迟早每家公司都会拥有专为自己打造的软件。',
+   'That is why everything must be systematic, fit together, and be specific to our company alone. Sooner or later, every company will have software built just for itself anyway.'),
+ P('เเละ เราได้เริ่มมันเเล้ว ในวันนี้ โดยที่ไม่รู้เลยว่า จะสำเร็จหรือไม่ เเต่อย่างน้อย เราได้เริ่มสร้างเพื่อมาแก้ไขปัญหาใหญ่ๆ ของเรามาตลอด ได้เเล้วในวันนี้ โดยยังไม่ได้ใช้งาน Agent ได้เต็มประสิทธิภาพเลยเสียด้วยซ้ำ',
+   '而我们今天已经开始了，虽然不知道能否成功，但至少我们今天已经开始动手，来解决我们一直以来的重大问题，甚至还没有充分发挥 Agent 的全部效能。',
+   'And we have started today, without knowing whether it will succeed. But at least we have begun building solutions to the big problems we have always had — and without even using Agents to their full potential yet.'),
+ P('สิ่งที่ยากที่สุด คือ การใช้ AI นำมา applied กับงานของเรา Idea เเละ รูปแบบ เป็นสิ่งที่ ใหม่ ทั้งหมดเเละยากที่จะ มีคำตอบเดียวภายในปัจจุบันนี้ เพราะ ทุกอย่างเปลี่ยนเเปลงเร็วมากๆ บางอย่างที่ได้ทำไปเเล้ว เเละ ไม่ work เเล้ว ก็ต้องทิ้งไป เพื่อไปสู่งานที่ใหม่กว่าในอนาคต',
+   '最难的是将 AI 应用到我们的工作中。想法和形式全都是全新的，在当下很难有唯一的答案，因为一切变化得非常快，有些已经做过的东西不再有效，也只能舍弃，以便迈向未来更新的工作。',
+   'The hardest part is applying AI to our work. The ideas and approaches are all new, and there is rarely a single answer today because everything changes so fast. Some things we have already built no longer work, and we have to throw them away to move on to newer work in the future.')
+]}
+];
+
+const IMG={'2':['pic_2.PNG'],'3':['pic_3.PNG'],'5':['pic_5.PNG'],'6':['pic_6.PNG'],'10':['pic_10.PNG'],'12':['pic_12.PNG'],'13':['pic_13.PNG','pic_13_2.PNG'],'14':['pic_14.PNG'],'15':['pic_15.PNG']};
+const fig=s=>{const f=IMG[s.n];if(!f)return '';const cap=UI[lang].fig.replace('{n}',s.n);return `<figure><div class="shots${f.length>1?' two':''}">${f.map((x,i)=>`<button type="button" class="shot" data-src="${esc(x)}"><img src="${esc(x)}" alt="${esc(cap)}${f.length>1?' ('+(i+1)+')':''}" width="${(SZ[x]||[])[0]||''}" height="${(SZ[x]||[])[1]||''}" loading="lazy"></button>`).join('')}</div><figcaption>${esc(cap)}</figcaption></figure>`};
+const SZ={'pic_2.PNG':[1909,751],'pic_3.PNG':[1921,1040],'pic_5.PNG':[818,591],'pic_6.PNG':[1139,815],'pic_10.PNG':[695,495],'pic_12.PNG':[1918,1005],'pic_13.PNG':[1920,1046],'pic_13_2.PNG':[1921,1018],'pic_14.PNG':[1919,1039],'pic_15.PNG':[1919,1039]};
+const cls={done:'s-done',use:'s-done',prog:'s-prog',test:'s-prog',go:'s-prog',pol:'s-plan',plan:'s-plan',hold:'s-hold'};
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+let lang='th',orig=false;
+try{const v=localStorage.getItem('cppe-lang');if(UI[v])lang=v;orig=localStorage.getItem('cppe-orig')==='1'}catch(e){}
+
+const o=x=>(orig&&lang!=='th')?`<span class="orig" lang="th">${esc(x.th)}</span>`:'';
+const tx=x=>esc(x[lang]);
+function block(b){
+ const u=UI[lang];
+ if(b.t==='p')return `<p>${tx(b)}${o(b)}</p>`;
+ if(b.t==='sub')return `<h3 class="sub">${tx(b)}</h3>`;
+ if(b.t==='k')return `<div class="k"><b>${esc(b.k)}</b><p>${tx(b)}${o(b)}</p></div>`;
+ if(b.t==='cmd')return `<div class="cmd${b.v==='bad'?' bad':''}"><small>${esc(b.v==='good'?u.good:b.v==='bad'?u.bad:u.say)}</small>${tx(b)}${o(b)}</div>`;
+ if(b.t==='list')return `<ul class="l">${b.items.map(i=>`<li>${tx(i)}${o(i)}</li>`).join('')}</ul>`;
+ if(b.t==='map'){const h=u[b.h];return `<table><thead><tr>${h.map(x=>`<th>${esc(x)}</th>`).join('')}</tr></thead><tbody>${b.rows.map(r=>`<tr><td class="c">${esc(r[0])}</td><td>${r[1]==='→'?'<span class="ar">→</span>':esc(r[1])}</td><td class="c">${esc(r[2])}</td></tr>`).join('')}</tbody></table>`}
+ if(b.t==='flow')return `<div class="flow">${b.v.map(esc).map(x=>`<span>${x}</span>`).join('<i>→</i>')}</div>`;
+ return '';
+}
+function render(){
+ const u=UI[lang];
+ document.documentElement.lang=lang==='zh'?'zh-CN':lang;
+ document.body.className=lang;
+ document.getElementById('brand').textContent=u.brand;
+ document.getElementById('h1').textContent=u.h1;
+ document.getElementById('lead').textContent=u.lead;
+ document.getElementById('foot').textContent=u.foot;
+ const tg=document.getElementById('tog');tg.hidden=lang==='th';
+ document.getElementById('togLbl').textContent=u.tog;
+ document.getElementById('showOrig').checked=orig;
+ document.querySelectorAll('.seg button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.l===lang));
+ document.getElementById('board').innerHTML=D.map(s=>`<a class="card" href="#s${s.n}"><span class="no">${s.n}</span><span class="t">${esc(s.short[lang])}</span><span class="chip ${cls[s.st]}">${esc(u.st[s.st])}</span></a>`).join('');
+ document.getElementById('tl').innerHTML='<i class="fill" id="fill"></i>'+D.map(s=>`<li><a href="#s${s.n}" data-n="${s.n}" title="${esc(s.short[lang])}"><span>${s.n}</span></a></li>`).join('');
+ document.getElementById('main').innerHTML=D.map(s=>`<section id="s${s.n}"><div class="sh"><span class="sn">${s.n}</span><div><h2>${esc(s.title[lang])}</h2>${lang!=='th'&&orig&&s.title.th!==s.title[lang]?`<span class="orig" lang="th">${esc(s.title.th)}</span>`:''}<span class="chip ${cls[s.st]}">${esc(u.st[s.st])}</span></div></div>${fig(s)}${s.b.map(block).join('')}<a class="top" href="#top">${esc(u.top)}</a></section>`).join('');
+}
+document.querySelectorAll('.seg button').forEach(b=>b.addEventListener('click',()=>{lang=b.dataset.l;try{localStorage.setItem('cppe-lang',lang)}catch(e){}render()}));
+document.getElementById('showOrig').addEventListener('change',e=>{orig=e.target.checked;try{localStorage.setItem('cppe-orig',orig?'1':'0')}catch(e){}render()});
+render();spy();
+function spy(){
+ const secs=[...document.querySelectorAll('main section')];let i=0;
+ secs.forEach((s,k)=>{if(s.getBoundingClientRect().top<170)i=k});
+ if(window.innerHeight+window.scrollY>=document.body.scrollHeight-4)i=secs.length-1;
+ const atTop=secs[0]&&secs[0].getBoundingClientRect().top>=170;
+ const links=[...document.querySelectorAll('.tl a')];
+ links.forEach((a,k)=>{a.classList.toggle('on',!atTop&&k===i);a.classList.toggle('past',!atTop&&k<i)});
+ const ol=document.getElementById('tl'),fill=document.getElementById('fill'),cur=links[i];
+ if(fill&&cur){fill.style.width=atTop?'0px':(cur.parentElement.offsetLeft+22-22)+'px'}
+ if(cur&&!atTop){const box=ol.parentElement,x=cur.parentElement.offsetLeft-box.clientWidth/2;if(box.scrollWidth>box.clientWidth)box.scrollTo({left:x,behavior:'auto'})}
+}
+let tk=0;window.addEventListener('scroll',()=>{if(!tk){tk=1;requestAnimationFrame(()=>{tk=0;spy()})}},{passive:true});
+window.addEventListener('resize',spy);
+document.querySelectorAll('.seg button').forEach(b=>b.addEventListener('click',spy));
+document.getElementById('showOrig').addEventListener('change',spy);
+const lb=document.getElementById('lb'),lbi=document.getElementById('lbimg');
+document.getElementById('main').addEventListener('click',e=>{const b=e.target.closest('.shot');if(!b)return;lbi.src=b.dataset.src;lbi.alt=b.querySelector('img').alt;lb.classList.add('open');lb.querySelector('button').focus()});
+lb.addEventListener('click',()=>lb.classList.remove('open'));
+document.addEventListener('keydown',e=>{if(e.key==='Escape')lb.classList.remove('open')});
+}
+</script>
+</body>
+</html>
